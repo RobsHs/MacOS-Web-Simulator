@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="calcBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3c3c3e"/>
+      <stop offset="100%" stop-color="#18181a"/>
+    </linearGradient>
+    <linearGradient id="calcOrange" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffb340"/>
+      <stop offset="100%" stop-color="#ff9500"/>
+    </linearGradient>
+    <linearGradient id="calcDarkBtn" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#545458"/>
+      <stop offset="100%" stop-color="#3a3a3c"/>
+    </linearGradient>
+    <linearGradient id="calcLightBtn" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8e8e93"/>
+      <stop offset="100%" stop-color="#636366"/>
+    </linearGradient>
+    <filter id="calcShadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  
+  <!-- Outer Squircle with Shadow -->
+  <rect x="32" y="32" width="448" height="448" rx="100" ry="100" fill="url(#calcBg)" filter="url(#calcShadow)"/>
+  <rect x="32" y="32" width="448" height="448" rx="100" ry="100" fill="url(#calcBg)"/>
+  <rect x="33" y="33" width="446" height="446" rx="99" ry="99" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="2"/>
+  
+  <!-- Top Display Screen -->
+  <rect x="76" y="74" width="360" height="90" rx="20" fill="#000000" fill-opacity="0.45" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+  <text x="410" y="140" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="56" font-weight="300" fill="#ffffff" text-anchor="end">0</text>
+  
+  <!-- Row 1: AC, +/-, %, ÷ -->
+  <circle cx="120" cy="216" r="34" fill="url(#calcLightBtn)"/>
+  <text x="120" y="226" font-family="-apple-system, sans-serif" font-size="24" font-weight="600" fill="#ffffff" text-anchor="middle">AC</text>
+  
+  <circle cx="210" cy="216" r="34" fill="url(#calcLightBtn)"/>
+  <text x="210" y="226" font-family="-apple-system, sans-serif" font-size="24" font-weight="600" fill="#ffffff" text-anchor="middle">±</text>
+  
+  <circle cx="300" cy="216" r="34" fill="url(#calcLightBtn)"/>
+  <text x="300" y="226" font-family="-apple-system, sans-serif" font-size="24" font-weight="600" fill="#ffffff" text-anchor="middle">%</text>
+  
+  <circle cx="390" cy="216" r="34" fill="url(#calcOrange)"/>
+  <text x="390" y="227" font-family="-apple-system, sans-serif" font-size="32" font-weight="400" fill="#ffffff" text-anchor="middle">÷</text>
+  
+  <!-- Row 2: 7, 8, 9, × -->
+  <circle cx="120" cy="298" r="34" fill="url(#calcDarkBtn)"/>
+  <text x="120" y="309" font-family="-apple-system, sans-serif" font-size="28" font-weight="400" fill="#ffffff" text-anchor="middle">7</text>
+  
+  <circle cx="210" cy="298" r="34" fill="url(#calcDarkBtn)"/>
+  <text x="210" y="309" font-family="-apple-system, sans-serif" font-size="28" font-weight="400" fill="#ffffff" text-anchor="middle">8</text>
+  
+  <circle cx="300" cy="298" r="34" fill="url(#calcDarkBtn)"/>
+  <text x="300" y="309" font-family="-apple-system, sans-serif" font-size="28" font-weight="400" fill="#ffffff" text-anchor="middle">9</text>
+  
+  <circle cx="390" cy="298" r="34" fill="url(#calcOrange)"/>
+  <text x="390" y="309" font-family="-apple-system, sans-serif" font-size="30" font-weight="400" fill="#ffffff" text-anchor="middle">×</text>
+  
+  <!-- Row 3: 4, 5, 6, - -->
+  <circle cx="120" cy="380" r="34" fill="url(#calcDarkBtn)"/>
+  <text x="120" y="391" font-family="-apple-system, sans-serif" font-size="28" font-weight="400" fill="#ffffff" text-anchor="middle">4</text>
+  
+  <circle cx="210" cy="380" r="34" fill="url(#calcDarkBtn)"/>
+  <text x="210" y="391" font-family="-apple-system, sans-serif" font-size="28" font-weight="400" fill="#ffffff" text-anchor="middle">5</text>
+  
+  <circle cx="300" cy="380" r="34" fill="url(#calcDarkBtn)"/>
+  <text x="300" y="391" font-family="-apple-system, sans-serif" font-size="28" font-weight="400" fill="#ffffff" text-anchor="middle">6</text>
+  
+  <circle cx="390" cy="380" r="34" fill="url(#calcOrange)"/>
+  <text x="390" y="391" font-family="-apple-system, sans-serif" font-size="32" font-weight="400" fill="#ffffff" text-anchor="middle">−</text>
+</svg>
+
