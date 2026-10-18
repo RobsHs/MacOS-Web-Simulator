@@ -56,7 +56,7 @@ const TrafficLights = ({ windowId }) => {
 
 export default function Messages({ windowId }) {
   const isDarkMode = useAppStore((s) => s.isDarkMode);
-  const [activeChatId, setActiveChatId] = useState("orkun");
+  const [activeChatId, setActiveChatId] = useState("devteam");
   const [searchQuery, setSearchQuery] = useState("");
   const [inputVal, setInputVal] = useState("");
   const messagesEndRef = useRef(null);
@@ -72,124 +72,106 @@ export default function Messages({ windowId }) {
     return lightPart || "bg-gray-200";
   };
 
-  // Mock Pinned Contacts
+  // Professional Pinned Contacts & Teams
   const pinnedContacts = [
-    { id: "ashley", name: "Ashley", avatar: "/icons/PngItem_4082636.png", bg: "bg-red-100 dark:bg-red-950/40", tip: "Did the kids finish their homework?", hasUnread: true, isImage: true },
-    { id: "dawn", name: "Dawn", avatar: "/icons/PngItem_4409921.png", bg: "bg-amber-100 dark:bg-amber-950/40", isImage: true },
-    { id: "rico", name: "Rico Family", avatar: "/icons/PngItem_4608119.png", bg: "bg-sky-100 dark:bg-sky-950/40", hasUnread: true, isImage: true },
-    { id: "olivia", name: "Olivia", avatar: "/icons/PngItem_5031003.png", bg: "bg-purple-100 dark:bg-purple-950/40", badge: "🌈", hasUnread: true, isImage: true },
-    { id: "will", name: "Will", avatar: "/icons/PngItem_6304991.png", bg: "bg-green-100 dark:bg-green-950/40", badge: "❤️", isImage: true },
-    { id: "animation", name: "Animation Team", avatar: "/icons/PngItem_6452863.png", bg: "bg-orange-200 dark:bg-orange-950/40", isImage: true },
-    { id: "foodie", name: "Foodie Friends", avatar: "/icons/PngItem_4082636.png", bg: "bg-teal-200 dark:bg-teal-950/40", isImage: true },
-    { id: "hiker", name: "Hiker Neighbors", avatar: "/icons/PngItem_4409921.png", bg: "bg-blue-200 dark:bg-blue-950/40", isImage: true },
-    { id: "aileen", name: "Aileen & Rich", avatar: "/icons/PngItem_4608119.png", bg: "bg-rose-200 dark:bg-rose-950/40", isImage: true }
+    { id: "devteam", name: "Core Dev Team", avatar: "/icons/vscode.svg", bg: "bg-sky-100 dark:bg-sky-950/40", tip: "macOS RobsHs v15.3 is live!", hasUnread: true, isImage: true },
+    { id: "sarah", name: "Sarah Lin", avatar: "/icons/PngItem_4082636.png", bg: "bg-emerald-100 dark:bg-emerald-950/40", tip: "Spring physics feel incredible!", hasUnread: true, isImage: true },
+    { id: "alex", name: "Alex Rivera", avatar: "/icons/PngItem_6452863.png", bg: "bg-orange-100 dark:bg-orange-950/40", badge: "🎨", hasUnread: false, isImage: true },
+    { id: "marcus", name: "Marcus Vance", avatar: "/icons/PngItem_4608119.png", bg: "bg-blue-100 dark:bg-blue-950/40", badge: "🚀", hasUnread: true, isImage: true },
+    { id: "elena", name: "Elena Rostova", avatar: "/icons/PngItem_5031003.png", bg: "bg-rose-100 dark:bg-rose-950/40", badge: "📸", tip: "Pacifica photos attached!", hasUnread: false, isImage: true },
+    { id: "david", name: "David Kim", avatar: "/icons/PngItem_4409921.png", bg: "bg-purple-100 dark:bg-purple-950/40", isImage: true }
   ];
 
   // Conversations and Chat History
   const [conversations, setConversations] = useState([
     {
-      id: "orkun",
-      name: "Orkun Kucuksevim",
-      avatar: "/icons/PngItem_4608119.png",
-      avatarBg: "bg-orange-100 dark:bg-orange-950/40",
+      id: "devteam",
+      name: "Core Dev Team",
+      avatar: "/icons/vscode.svg",
+      avatarBg: "bg-sky-100 dark:bg-sky-950/40",
       isImage: true,
-      date: "Sunday",
-      isGroup: false,
-      colorTheme: "blue", // SMS Style
-      messages: [
-        { id: 1, sender: "Orkun", text: "For family game night Friday, could we borrow some puzzles, please?", time: "Sunday 10:20 AM" },
-        { id: 2, sender: "me", text: "Like a jigsaw puzzle or the wood and metal brain teasers?", time: "Sunday 10:22 AM" },
-        { id: 3, sender: "Orkun", text: "Oh! 🧠 I forgot that you collect all kinds of puzzles", time: "Sunday 10:23 AM" },
-        { id: 4, sender: "Orkun", text: "Let's stick with the jigsaws for now", time: "Sunday 10:24 AM" },
-        { id: 5, sender: "me", text: "Anytime, neighbor", time: "Sunday 10:25 AM" },
-        { id: 6, sender: "me", text: "I have the perfect puzzle for you to challenge the kids", time: "Sunday 10:26 AM" },
-        { id: 7, sender: "me", image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800", time: "Sunday 10:27 AM" },
-        { id: 8, sender: "me", text: "But only if you carefully count all 1000 pieces before returning it 😜", time: "Sunday 10:28 AM" },
-        { id: 9, sender: "Orkun", text: "Hmm. Maybe just a 500 piece one? 😂", time: "Sunday 10:30 AM" },
-        { id: 10, sender: "Orkun", text: "Or I can just put the kids on one?", time: "Sunday 10:31 AM" },
-        { id: 11, sender: "me", text: "Come by if you want them", time: "Sunday 10:32 AM", isRead: true },
-        { id: 12, sender: "Orkun", text: "Thanks for the puzzles!", time: "Sunday 10:35 AM" }
-      ]
-    },
-    {
-      id: "hiker",
-      name: "Hiker Neighbors",
-      avatar: "/icons/PngItem_4409921.png",
-      avatarBg: "bg-blue-100 dark:bg-blue-950/40",
-      isImage: true,
-      date: "Sunday",
+      date: "10:30 AM",
       isGroup: true,
-      colorTheme: "blue", // iMessage Style
+      colorTheme: "blue",
       messages: [
-        { id: 1, sender: "Xiaomeng Zhong", text: "Oh, wow! Where 🌍 ⁉️", time: "Sunday 9:30 AM" },
-        { id: 2, sender: "me", text: "They're on a secret mission...", time: "Sunday 9:32 AM", isRead: true },
-        { id: 3, sender: "Orkun", text: "Give us a clue!", time: "Sunday 9:35 AM", reaction: "😂 HAHA" },
-        { id: 4, sender: "Hiker Neighbors", image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600", time: "Sunday 9:40 AM" }
+        { id: 1, sender: "Marcus Vance", text: "Hey team! The production build for macOS RobsHs v15.3 is live on Firebase Hosting! 🚀", time: "10:15 AM" },
+        { id: 2, sender: "Sarah Lin", text: "Just tested the genie minimize canvas mesh — 60fps locked, zero frame drops even during video playback!", time: "10:18 AM" },
+        { id: 3, sender: "me", text: "Awesome! The Monaco Editor integration and custom Web Audio synthesizer are also fully wired up.", time: "10:20 AM" },
+        { id: 4, sender: "Alex Rivera", text: "The Sequoia glass dock looks spot on. Pushing updated SVG icons to the assets folder now.", time: "10:24 AM", reaction: "❤️" },
+        { id: 5, sender: "Core Dev Team", image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=600", time: "10:26 AM" },
+        { id: 6, sender: "me", text: "All git commits are organized with conventional commits. Ready for the GitHub release!", time: "10:30 AM", isRead: true }
       ]
     },
     {
-      id: "trev",
-      name: "Trev Smith",
+      id: "sarah",
+      name: "Sarah Lin",
+      avatar: "/icons/PngItem_4082636.png",
+      avatarBg: "bg-emerald-100 dark:bg-emerald-950/40",
+      isImage: true,
+      date: "9:45 AM",
+      isGroup: false,
+      colorTheme: "blue",
+      messages: [
+        { id: 1, sender: "Sarah", text: "Hey Robs! Did you test the spring physics damping on the Dock icons?", time: "9:35 AM" },
+        { id: 2, sender: "me", text: "Yes! Using mass: 0.8, tension: 320, friction: 24. Gives that exact snappy macOS rebound.", time: "9:40 AM" },
+        { id: 3, sender: "Sarah", text: "It feels so satisfying. Let's do a quick code walk-through this afternoon!", time: "9:45 AM" }
+      ]
+    },
+    {
+      id: "alex",
+      name: "Alex Rivera",
       avatar: "/icons/PngItem_6452863.png",
-      avatarBg: "bg-amber-100 dark:bg-amber-950/40",
+      avatarBg: "bg-orange-100 dark:bg-orange-950/40",
       isImage: true,
       date: "Yesterday",
       isGroup: false,
       colorTheme: "blue",
       messages: [
-        { id: 1, sender: "Trev", text: "Gotcha covered!", time: "Yesterday 4:15 PM" }
+        { id: 1, sender: "Alex", text: "The vector SVGs for Calculator and Terminal have been exported in standard Apple 256x256 grid.", time: "Yesterday 4:15 PM" },
+        { id: 2, sender: "me", text: "Received and placed in public/icons! They look super crisp on Retina displays.", time: "Yesterday 4:20 PM", isRead: true }
       ]
     },
     {
-      id: "antonio",
-      name: "Antonio Manriquez",
-      avatar: "/icons/PngItem_6452863.png",
-      avatarBg: "bg-green-100 dark:bg-green-950/40",
+      id: "marcus",
+      name: "Marcus Vance",
+      avatar: "/icons/PngItem_4608119.png",
+      avatarBg: "bg-blue-100 dark:bg-blue-950/40",
       isImage: true,
-      date: "Sunday",
+      date: "Yesterday",
       isGroup: false,
       colorTheme: "blue",
       messages: [
-        { id: 1, sender: "Antonio", text: "Is your mind blown? 🤯", time: "Sunday 2:10 PM" }
+        { id: 1, sender: "Marcus", text: "GitHub repository https://github.com/RobsHs/MacOS-Web-Simulator is officially synced and live!", time: "Yesterday 2:10 PM" },
+        { id: 2, sender: "me", text: "Checked the commit graph — 3 months of development commits looking clean and natural.", time: "Yesterday 2:15 PM", isRead: true }
       ]
     },
     {
-      id: "xiaomeng",
-      name: "Xiaomeng Zhong",
+      id: "elena",
+      name: "Elena Rostova",
       avatar: "/icons/PngItem_5031003.png",
-      avatarBg: "bg-purple-100 dark:bg-purple-950/40",
-      isImage: true,
-      date: "Sunday",
-      isGroup: false,
-      colorTheme: "blue",
-      messages: [
-        { id: 1, sender: "Xiaomeng", text: "Now you've got me thinking about my next vacation", time: "Sunday 1:05 PM" }
-      ]
-    },
-    {
-      id: "jasmine",
-      name: "Jasmine Garcia",
-      avatar: "/icons/PngItem_4082636.png",
       avatarBg: "bg-rose-100 dark:bg-rose-950/40",
       isImage: true,
-      date: "Saturday",
+      date: "Oct 16",
       isGroup: false,
       colorTheme: "blue",
       messages: [
-        { id: 1, sender: "Jasmine", text: "See you tomorrow!", time: "Saturday 5:30 PM" }
+        { id: 1, sender: "Elena", text: "Hey Robs, take a look at the Pacifica sunset shot from our weekend session! 🌅", time: "Oct 16 6:05 PM" },
+        { id: 2, sender: "Elena", image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800", time: "Oct 16 6:06 PM" },
+        { id: 3, sender: "me", text: "Stunning! Added to the 6K dynamic wallpapers list in Settings.", time: "Oct 16 6:10 PM", isRead: true }
       ]
     },
     {
-      id: "nisha",
-      name: "Nisha Kumar",
-      avatar: "/icons/PngItem_5031003.png",
-      avatarBg: "bg-teal-100 dark:bg-teal-950/40",
+      id: "david",
+      name: "David Kim",
+      avatar: "/icons/PngItem_4409921.png",
+      avatarBg: "bg-purple-100 dark:bg-purple-950/40",
       isImage: true,
-      date: "Friday",
+      date: "Oct 15",
       isGroup: false,
       colorTheme: "blue",
       messages: [
-        { id: 1, sender: "Nisha", text: "Cool... I'll be by just before 7 to drop off the birthday cake 🎂", time: "Friday 6:00 PM" }
+        { id: 1, sender: "David", text: "Audio buffer latency test passed on Chrome and Safari! 🎵", time: "Oct 15 3:30 PM" },
+        { id: 2, sender: "me", text: "Awesome! Zero audio stuttering when opening apps.", time: "Oct 15 3:32 PM", isRead: true }
       ]
     }
   ]);
@@ -448,10 +430,15 @@ export default function Messages({ windowId }) {
                   {activeChat.isGroup && !isMe && (
                     <div className="w-5 h-5 rounded-full overflow-hidden flex items-center justify-center shrink-0 mb-0.5 bg-gray-200 p-0.5">
                       <img 
-                        src={msg.sender === "Xiaomeng Zhong" ? "/icons/PngItem_5031003.png" : "/icons/PngItem_4608119.png"} 
+                        src={
+                          msg.sender === "Sarah Lin" ? "/icons/PngItem_4082636.png" :
+                          msg.sender === "Alex Rivera" ? "/icons/PngItem_6452863.png" :
+                          msg.sender === "Elena Rostova" ? "/icons/PngItem_5031003.png" :
+                          "/icons/PngItem_4608119.png"
+                        } 
                         alt={msg.sender} 
                         className="w-full h-full object-contain" 
-                        />
+                      />
                     </div>
                   )}
 

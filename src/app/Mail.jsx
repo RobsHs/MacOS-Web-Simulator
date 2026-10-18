@@ -63,105 +63,106 @@ export default function Mail({ windowId }) {
   const isDarkMode = useAppStore((s) => s.isDarkMode);
   const [selectedMailbox, setSelectedMailbox] = useState("inbox");
   const [activeCategory, setActiveCategory] = useState("primary");
-  const [selectedEmailId, setSelectedEmailId] = useState(3); // Default selected Orkun email
+  const [selectedEmailId, setSelectedEmailId] = useState(1); // Default selected email (GitHub Notification)
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   // Mock Mailbox counts
   const mailboxCounts = { inbox: 2 };
 
-  // Mock Emails
+  // Professional System & Developer Emails for macOS RobsHs
   const emails = [
     {
       id: 1,
-      sender: "Xiaomeng Zhong",
-      avatar: "/icons/PngItem_5031003.png",
-      subject: "Dinner at the Ricos'",
-      date: "3/24/25",
-      excerpt: "Dear Danny, Thanks again for the delicious evening. It was so much fun making and eating...",
+      sender: "GitHub Notifications",
+      avatar: "/icons/vscode.svg",
+      subject: "⭐ New Star on RobsHs/MacOS-Web-Simulator",
+      date: "10:45 AM",
+      excerpt: "Hey RobsHs! Your repository RobsHs/MacOS-Web-Simulator just hit a new milestone...",
       isUnread: true,
-      hasAttachment: true,
+      hasAttachment: false,
       category: "primary",
-      content: `Hello Danny,\n\nThanks again for the delicious evening. It was so much fun making and eating dinner with you and the rest of the crew! Let's do it again next month.\n\nBest,\nXiaomeng`
+      content: `Hello RobsHs,\n\nYour repository RobsHs/MacOS-Web-Simulator just received fresh attention on GitHub! The community loved the fluid Dock magnification curve, real Monaco editor integration, and custom Web Audio synthesizer.\n\nKeep building awesome web experiences!\n\nBest regards,\nThe GitHub Team`
     },
     {
       id: 2,
-      sender: "Jenny Court",
+      sender: "Sarah Lin",
       avatar: "/icons/PngItem_4082636.png",
-      subject: "Walkthrough",
-      date: "3/20/25",
-      excerpt: "Hi Danny and Ashley, I've just completed a walkthrough of 212 Opal and wanted to share...",
+      subject: "Architecture Review: Canvas Mesh & Audio Engine",
+      date: "9:20 AM",
+      excerpt: "Hi Robs, I reviewed your latest commits for the macOS web simulator. The genie warp canvas mesh...",
       isUnread: true,
       category: "primary",
-      content: `Hi Danny and Ashley,\n\nI've just completed a walkthrough of 212 Opal and wanted to share the findings report with you. Everything looks structurally sound, and the layout works perfectly.\n\nCheers,\nJenny`
+      content: `Hi Robs,\n\nI reviewed your latest commits for the macOS web simulator. The genie warp canvas mesh animation and sub-millisecond Web Audio API synthesizer look remarkably native! The physics-driven spring damping on window restore feels so natural.\n\nLet's schedule a call tomorrow afternoon to discuss multi-monitor support.\n\nCheers,\nSarah Lin\nStaff Frontend Engineer`
     },
     {
       id: 3,
-      sender: "Orkun Kucuksevim",
-      avatar: "/icons/PngItem_4608119.png",
-      subject: "Day trip idea",
-      date: "3/17/25",
-      excerpt: "Hello Danny, Here's more info on that park I was telling you about. Definitely go if you have the...",
+      sender: "Elena Rostova",
+      avatar: "/icons/PngItem_5031003.png",
+      subject: "Pacifica Coastal Cafe & Tech Meetup",
+      date: "Yesterday",
+      excerpt: "Hey Robs, Here is the cafe spot by the Pacifica coast I was telling you about for our weekend sprint...",
       isUnread: false,
       isReplied: true,
       category: "primary",
       hasMap: true,
-      content: `Hello Danny,\n\nHere's more info on that park I was telling you about. Definitely go if you have the chance!`
+      content: `Hey Robs,\n\nHere is the cafe spot by the Pacifica coast I was telling you about for our weekend sprint. Great coffee, ocean breeze, and fast Wi-Fi to test the latest macOS RobsHs build!\n\nSee you there at 10 AM!`
     },
     {
       id: 4,
-      sender: "Po-Chun Yeh",
-      avatar: "/icons/PngItem_6304991.png",
-      subject: "Lunch call?",
-      date: "3/14/25",
-      excerpt: "Hey Danny, Think you'll be free for a lunchtime chat sometime soon? I've got Thursday, Marc...",
-      isUnread: false,
-      category: "primary",
-      content: `Hey Danny,\n\nThink you'll be free for a lunchtime chat sometime soon? I've got Thursday, March 20th open, or we could do early next week. Let me know what works.\n\nBest,\nPo-Chun`
-    },
-    {
-      id: 5,
-      sender: "Antonio Manriquez",
+      sender: "Alex Rivera",
       avatar: "/icons/PngItem_6452863.png",
-      subject: "Pick up from airport?",
-      date: "3/10/25",
-      excerpt: "Hi Danny! Hope all's well with you. I'm coming home tomorrow and was wondering if you mig...",
-      isUnread: false,
-      category: "primary",
-      content: `Hi Danny!\n\nHope all's well with you. I'm coming home tomorrow on flight AA204 and was wondering if you might be free to pick me up around 4 PM? Let me know.\n\nThanks,\nAntonio`
-    },
-    {
-      id: 6,
-      sender: "Rich Dinh",
-      avatar: "/icons/PngItem_4608119.png",
-      subject: "National Parks in Southern California",
-      date: "3/6/25",
-      excerpt: "Hi Danny, I can't wait for our upcoming Joshua Tree National Park trip. Check out this guide a...",
-      isUnread: false,
-      category: "primary",
-      content: `Hi Danny,\n\nI can't wait for our upcoming Joshua Tree National Park trip. Check out this guide and let me know which trails you want to hike first.\n\nTalk soon,\nRich`
-    },
-    {
-      id: 7,
-      sender: "Elena Lanot",
-      avatar: "/icons/PngItem_5031003.png",
-      subject: "Interpretation job follow-up",
-      date: "3/3/25",
-      excerpt: "Hey Danny, Thanks much for taking time to meet with me last week—super cool to hear a...",
-      isUnread: false,
-      category: "primary",
-      content: `Hey Danny,\n\nThanks much for taking time to meet with me last week—super cool to hear about your interpretation work. Let's stay in touch.\n\nWarmly,\nElena`
-    },
-    {
-      id: 8,
-      sender: "Rigo Rangel",
-      avatar: "/icons/PngItem_6304991.png",
-      subject: "Fun memories",
-      date: "2/21/25",
-      excerpt: "Check out this photo of the group from last summer. Can't believe it has been a year already...",
+      subject: "macOS Sequoia Liquid Glass UI Kit & SVG Icons",
+      date: "Oct 16",
+      excerpt: "Hey Robs! Attached are the vector SVG icons and glassmorphism specifications for the Control Center...",
       isUnread: false,
       hasAttachment: true,
       category: "primary",
-      content: `Hi Danny,\n\nCheck out this photo of the group from last summer. Can't believe it has been a year already! Looking forward to seeing everyone again soon.\n\nBest,\nRigo`
+      content: `Hey Robs!\n\nAttached are the updated vector SVG icons and glassmorphism specifications for the Control Center and Dock. We calibrated the backdrop-filter blur radii to 40px with 180% saturation to ensure 100% visual parity with Sequoia.\n\nLet me know if you need higher DPI assets!\n\nAlex Rivera\nPrincipal UI/UX Designer`
+    },
+    {
+      id: 5,
+      sender: "Firebase Deployments",
+      avatar: "/icons/terminal.svg",
+      subject: "Deployment Completed: macos-me.web.app",
+      date: "Oct 15",
+      excerpt: "Deployment to live channel succeeded. 24 files uploaded with cache headers optimized for CDN...",
+      isUnread: false,
+      category: "primary",
+      content: `Hello RobsHs,\n\nYour deployment to site 'macos-me' has completed successfully.\n\nChannel: live\nURL: https://macos-me.web.app\nStatus: 200 OK (Edge CDN active)\n\nAll static assets, Leaflet maps, and Monaco runtime bundles are live and verified.`
+    },
+    {
+      id: 6,
+      sender: "Marcus Vance",
+      avatar: "/icons/PngItem_4608119.png",
+      subject: "Monaco Editor Multi-Tab AST Workspace",
+      date: "Oct 14",
+      excerpt: "Robs, the Monaco code runner in the new VS Code window is incredible. The live iframe runtime...",
+      isUnread: false,
+      category: "primary",
+      content: `Robs,\n\nThe Monaco code runner in the new VS Code window is incredible. The live iframe runtime sandbox works seamlessly without blocking the main browser thread. Looking forward to integrating Python support next!\n\nMarcus Vance\nCore Engineering Lead`
+    },
+    {
+      id: 7,
+      sender: "David Kim",
+      avatar: "/icons/PngItem_4409921.png",
+      subject: "Sub-millisecond Web Audio Latency Benchmark",
+      date: "Oct 12",
+      excerpt: "Ran the audio buffer benchmarks on macOS Web Simulator. AudioContext latency clocked in at 4.2ms...",
+      isUnread: false,
+      category: "primary",
+      content: `Hey Robs,\n\nRan the audio buffer benchmarks on macOS Web Simulator. AudioContext latency clocked in at under 4.2ms, meaning keyboard clicks, dock pop sounds, and trash emptying have zero perceived lag.\n\nGreat work on the synthetic oscillators!\n\nBest,\nDavid`
+    },
+    {
+      id: 8,
+      sender: "Apple Developer",
+      avatar: "/icons/apple.png",
+      subject: "WWDC Developer Session: Modern Web Architecture",
+      date: "Oct 10",
+      excerpt: "Explore principles of desktop-grade web application development, reactive state management, and...",
+      isUnread: false,
+      hasAttachment: true,
+      category: "primary",
+      content: `Dear Developer,\n\nDiscover how leading engineers are leveraging React, Web Audio, and WebGL shaders to deliver desktop-grade browser simulations.\n\nExplore our latest sessions and design kits on developer.apple.com.\n\nApple Worldwide Developer Relations`
     }
   ];
 
@@ -520,12 +521,12 @@ export default function Mail({ windowId }) {
                 <div className="font-semibold text-[13px] text-gray-800 dark:text-gray-200 mt-0.5">{selectedEmail.subject}</div>
                 <div className="text-[11.5px] text-gray-500 mt-0.5">
                   <span className="font-medium">To: </span>
-                  <span className="font-mono">doc.en_us.08@icloud.com</span>
+                  <span className="font-mono">robshs@icloud.com</span>
                 </div>
               </div>
             </div>
             <div className="text-right shrink-0">
-              <span className="text-[11px] text-gray-400 font-medium">March 17, 2025 at 6:37 PM</span>
+              <span className="text-[11px] text-gray-400 font-medium">October 18, 2026 at 10:45 AM</span>
             </div>
           </div>
 
@@ -536,7 +537,7 @@ export default function Mail({ windowId }) {
             {selectedEmail.content}
           </div>
 
-          {/* Muir Woods Map Attachment Card (Only if email hasMap is true) */}
+          {/* Pacifica Coastal Map Attachment Card (Only if email hasMap is true) */}
           {selectedEmail.hasMap && (
             <div className={`mt-6 rounded-2xl overflow-hidden border max-w-lg shadow-md ${
               isDarkMode ? "bg-[#2C2C2E] border-white/10" : "bg-[#F3F3F3] border-black/10"
@@ -544,17 +545,17 @@ export default function Mail({ windowId }) {
               {/* Map image mockup */}
               <div className="h-44 relative bg-sky-200">
                 <img 
-                  src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800" 
-                  alt="Muir Woods Map" 
+                  src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" 
+                  alt="Pacifica Coastal Cafe Map" 
                   className="w-full h-full object-cover"
                 />
                 {/* Simulated Location Marker Pin */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center">
-                  <div className="w-8 h-8 rounded-full bg-green-600 flex items-center justify-center shadow-lg border border-white">
-                    <MapPin size={16} className="text-white fill-green-600" />
+                  <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center shadow-lg border border-white">
+                    <MapPin size={16} className="text-white fill-blue-600" />
                   </div>
                   <div className={`mt-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-bold shadow-md bg-white text-gray-900 border border-black/5`}>
-                    Muir Woods
+                    Pacifica Coastal Cafe
                   </div>
                 </div>
               </div>
@@ -562,20 +563,20 @@ export default function Mail({ windowId }) {
               {/* Map Details Section */}
               <div className="p-5 space-y-3">
                 <div>
-                  <h3 className="font-bold text-[14px]">Muir Woods National Monument</h3>
-                  <p className="text-[11.5px] text-gray-500 mt-0.5">National Monument</p>
+                  <h3 className="font-bold text-[14px]">Pacifica Coastal Cafe & Workspace</h3>
+                  <p className="text-[11.5px] text-gray-500 mt-0.5">Scenic Cafe & Oceanfront Workspace</p>
                 </div>
 
                 <div className="text-[12px] text-gray-600 dark:text-gray-300 leading-snug space-y-0.5">
-                  <p>1 Muir Woods Rd</p>
-                  <p>Mill Valley, CA 94941</p>
+                  <p>5000 Coastal Hwy</p>
+                  <p>Pacifica, CA 94044</p>
                   <p>United States</p>
                 </div>
 
                 <div className="text-[12px] leading-snug">
-                  <p className="text-gray-500">+1 (415) 561-2850</p>
-                  <a href="https://nps.gov/muwo" target="_blank" rel="noreferrer" className="text-[#007AFF] hover:underline font-medium block mt-0.5">
-                    nps.gov/muwo
+                  <p className="text-gray-500">+1 (650) 355-1200</p>
+                  <a href="https://pacificacoastal.com" target="_blank" rel="noreferrer" className="text-[#007AFF] hover:underline font-medium block mt-0.5">
+                    pacificacoastal.com
                   </a>
                 </div>
 
@@ -600,9 +601,9 @@ export default function Mail({ windowId }) {
               <div className="flex items-center justify-between text-[11px] text-gray-400">
                 <div className="flex items-center gap-2">
                   <div className="w-5 h-5 rounded-full overflow-hidden bg-gray-200 p-0.5">
-                    <img src="/icons/PngItem_4409921.png" alt="Danny Rico" className="w-full h-full object-contain" />
+                    <img src="/icons/PngItem_4409921.png" alt="RobsHs" className="w-full h-full object-contain" />
                   </div>
-                  <span className="font-bold text-gray-500">Danny Rico</span>
+                  <span className="font-bold text-gray-500">RobsHs</span>
                 </div>
                 <span>11:09 AM</span>
               </div>

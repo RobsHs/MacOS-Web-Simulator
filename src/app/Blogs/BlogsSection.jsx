@@ -159,6 +159,26 @@ const defaultNotes = [
     thumbnail: "/images/macos27.png",
     images: ["/images/macos27.png"],
     updatedAt: "2026-10-18T10:00:00Z"
+  },
+  {
+    id: 11,
+    title: "Roadmap macOS Web Simulator v15.3",
+    subtitle: "Rencana & Arsitektur",
+    content: "Catatan Teknis:\n- React 19 & Tailwind CSS v4 Engine\n- Monaco Visual Studio Code Workspace dengan live multi-tab execution\n- Web Audio API Synthesizer dengan latensi sub-4ms\n- Canvas mesh warp genie minimize & restore animation\n- Leaflet GPS Geolocation maps integration",
+    date: "16/10/26",
+    pinned: false,
+    folder: "notes",
+    updatedAt: "2026-10-16T14:30:00Z"
+  },
+  {
+    id: 12,
+    title: "Spesifikasi Liquid Glass & UI Shaders",
+    subtitle: "Desain Sistem",
+    content: "Parameter Glassmorphism Sequoia:\n- Backdrop Blur: 40px saturate(180%)\n- Border: 1px solid rgba(255,255,255,0.12)\n- Box Shadow: 0 8px 32px rgba(0,0,0,0.35)\n- Spring Physics: mass 0.8, tension 320, friction 24",
+    date: "14/10/26",
+    pinned: false,
+    folder: "notes",
+    updatedAt: "2026-10-14T09:15:00Z"
   }
 ];
 

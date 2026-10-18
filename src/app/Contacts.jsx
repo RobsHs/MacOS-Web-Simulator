@@ -68,116 +68,116 @@ const TrafficLights = ({ windowId }) => {
 
 const defaultContacts = [
   {
-    id: "antonio",
-    firstName: "Antonio",
-    lastName: "Manriquez",
+    id: "alex",
+    firstName: "Alex",
+    lastName: "Rivera",
     avatar: "/icons/PngItem_6452863.png",
     avatarBg: "bg-orange-100 dark:bg-orange-950/40",
     gradient: "from-[#ff9f0a]/80 to-[#ff3b30]/80",
-    phone: "(919) 555-0192",
-    email: "antonio.m@icloud.com",
-    workEmail: "amanriquez@trioceramics.com",
-    address: "124 Market St, San Francisco CA 94102",
+    phone: "+1 (415) 890-2134",
+    email: "alex.rivera@icloud.com",
+    workEmail: "arivera@designsystem.co",
+    address: "240 Stockton St, San Francisco CA 94108",
     birthday: "Jan 12",
-    notes: "Met at the ceramics workshop."
+    notes: "Principal UI/UX Designer. Collaborating on macOS liquid glass shaders and vector SVG assets."
   },
   {
-    id: "magico",
-    firstName: "Magico",
-    lastName: "Martinez",
-    avatar: "/icons/PngItem_5031003.png",
-    avatarBg: "bg-emerald-100 dark:bg-emerald-950/40",
-    gradient: "from-[#30d158]/80 to-[#116928]/80",
-    phone: "(919) 555-0143",
-    email: "magico.m@icloud.com",
-    workEmail: "mmartinez@apple.com",
-    address: "455 Cupertino Way, Cupertino CA 95014",
-    birthday: "Mar 05",
-    notes: "App designer."
-  },
-  {
-    id: "graham",
-    firstName: "Graham",
-    lastName: "McBride",
+    id: "david",
+    firstName: "David",
+    lastName: "Kim",
     avatar: "/icons/PngItem_4409921.png",
     avatarBg: "bg-purple-100 dark:bg-purple-950/40",
     gradient: "from-[#bf5af2]/80 to-[#5e5ce6]/80",
-    phone: "(919) 555-0177",
-    email: "graham@icloud.com",
-    workEmail: "gmcbride@trioceramics.com",
+    phone: "+1 (206) 555-0182",
+    email: "david.kim@icloud.com",
+    workEmail: "dkim@systems.dev",
     address: "789 Pine St, Seattle WA 98101",
     birthday: "Jul 19",
-    notes: "Exhibition art coordinator."
+    notes: "Senior Systems Engineer. Audio DSP & Web Audio API synthesizer benchmark specialist."
   },
   {
-    id: "jay",
-    firstName: "Jay",
-    lastName: "Mung",
+    id: "elena",
+    firstName: "Elena",
+    lastName: "Rostova",
+    avatar: "/icons/PngItem_5031003.png",
+    avatarBg: "bg-rose-100 dark:bg-rose-950/40",
+    gradient: "from-[#ff6482]/80 to-[#ff2d55]/80",
+    phone: "+1 (650) 355-9011",
+    email: "elena.rostova@icloud.com",
+    workEmail: "elena@visualarts.studio",
+    address: "5000 Coastal Hwy, Pacifica CA 94044",
+    birthday: "Dec 30",
+    notes: "Creative Director & Photographer. Captured the 6K dynamic landscape wallpapers."
+  },
+  {
+    id: "marcus",
+    firstName: "Marcus",
+    lastName: "Vance",
     avatar: "/icons/PngItem_4608119.png",
     avatarBg: "bg-sky-100 dark:bg-sky-950/40",
     gradient: "from-[#0a84ff]/80 to-[#0040dd]/80",
-    phone: "(919) 555-0128",
-    email: "jay.mung@icloud.com",
-    workEmail: "jmung@trioceramics.com",
-    address: "321 Oak Ave, Portland OR 97201",
+    phone: "+1 (512) 440-9281",
+    email: "marcus.vance@icloud.com",
+    workEmail: "mvance@opensource.org",
+    address: "321 Congress Ave, Austin TX 78701",
     birthday: "Nov 02",
-    notes: "Monstera collector."
+    notes: "Core Open Source Contributor. Monaco Editor AST workspace runtime integration lead."
+  },
+  {
+    id: "nathalie",
+    firstName: "Nathalie",
+    lastName: "Dubois",
+    avatar: "/icons/PngItem_4082636.png",
+    avatarBg: "bg-pink-100 dark:bg-pink-950/40",
+    gradient: "from-[#e46e88] to-[#993b50]",
+    phone: "+1 (212) 774-1290",
+    email: "nathalie.dubois@icloud.com",
+    workEmail: "ndubois@cloudarch.io",
+    address: "100 Broadway, New York NY 10005",
+    birthday: "Sep 21",
+    notes: "Full-Stack Architect & Cloud Infrastructure Consultant."
+  },
+  {
+    id: "robshs",
+    firstName: "RobsHs",
+    lastName: "(Me)",
+    avatar: "/icons/PngItem_4409921.png",
+    avatarBg: "bg-blue-100 dark:bg-blue-950/40",
+    gradient: "from-[#64d2ff]/80 to-[#0a84ff]/80",
+    phone: "+62 812-3456-7890",
+    email: "robshs@icloud.com",
+    workEmail: "Fredapacitan@gmail.com",
+    address: "Pacitan, East Java / Global Remote",
+    birthday: "May 14",
+    notes: "Creator and Lead Engineer of macOS RobsHs Web Simulator."
   },
   {
     id: "sarah",
     firstName: "Sarah",
-    lastName: "Murguia",
+    lastName: "Lin",
     avatar: "/icons/PngItem_4082636.png",
-    avatarBg: "bg-pink-100 dark:bg-pink-950/40",
-    gradient: "from-[#e46e88] to-[#993b50]",
-    phone: "(919) 555-2481",
-    email: "SarMurguia@icloud.com",
-    workEmail: "hello@trioceramics.com",
-    address: "2399 Elm St, Raleigh NC 27601",
-    birthday: "Sep 21",
-    notes: "Lead ceramic designer."
+    avatarBg: "bg-emerald-100 dark:bg-emerald-950/40",
+    gradient: "from-[#30d158]/80 to-[#116928]/80",
+    phone: "+1 (415) 670-3321",
+    email: "sarah.lin@icloud.com",
+    workEmail: "slin@frontendeng.com",
+    address: "455 Market St, San Francisco CA 94105",
+    birthday: "Mar 05",
+    notes: "Staff Frontend Engineer. React 19 architecture and physics spring damping advisor."
   },
   {
-    id: "ryan",
-    firstName: "Ryan",
-    lastName: "Notch",
+    id: "yuki",
+    firstName: "Yuki",
+    lastName: "Tanaka",
     avatar: "/icons/PngItem_5031003.png",
-    avatarBg: "bg-blue-100 dark:bg-blue-950/40",
-    gradient: "from-[#64d2ff]/80 to-[#0a84ff]/80",
-    phone: "(919) 555-0185",
-    email: "ryan.notch@icloud.com",
-    workEmail: "rnotch@trioceramics.com",
-    address: "567 Birch Rd, Asheville NC 28801",
-    birthday: "May 14",
-    notes: "Monstera delivery coordinator."
-  },
-  {
-    id: "aga",
-    firstName: "Aga",
-    lastName: "Orlova",
-    avatar: "/icons/PngItem_4608119.png",
-    avatarBg: "bg-rose-100 dark:bg-rose-950/40",
-    gradient: "from-[#ff6482]/80 to-[#ff2d55]/80",
-    phone: "(919) 555-0133",
-    email: "aga.orlova@icloud.com",
-    workEmail: "aorlova@trioceramics.com",
-    address: "890 Spruce St, Denver CO 80202",
-    birthday: "Dec 30",
-    notes: "Photographer."
-  },
-  {
-    id: "mayuri",
-    firstName: "Mayuri",
-    lastName: "Patel",
-    avatar: "/icons/PngItem_4082636.png",
     avatarBg: "bg-amber-100 dark:bg-amber-950/40",
     gradient: "from-[#ffd60a]/80 to-[#ff9f0a]/80",
-    phone: "(919) 555-0144",
-    email: "mayuri.patel@icloud.com",
-    workEmail: "mpatel@trioceramics.com",
-    address: "432 Cedar Ln, Raleigh NC 27603",
+    phone: "+81 3-5555-0199",
+    email: "yuki.tanaka@icloud.com",
+    workEmail: "ytanaka@ai-research.jp",
+    address: "Roppongi Hills, Minato-ku, Tokyo 106-6108",
     birthday: "Oct 08",
-    notes: "Monstera layout planner."
+    notes: "AI Research Engineer & Audio DSP Specialist."
   }
 ];
 
@@ -195,11 +195,22 @@ export default function ContactsApp({ windowId }) {
   const isDarkMode = useAppStore((s) => s.isDarkMode);
   
   const [contacts, setContacts] = useState(() => {
-    const saved = localStorage.getItem("os_contacts");
-    return saved ? JSON.parse(saved) : defaultContacts;
+    try {
+      const saved = localStorage.getItem("os_contacts");
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        // Clear if legacy mock data detected
+        if (parsed.some(c => c.workEmail?.includes("trioceramics") || c.lastName === "Manriquez")) {
+          localStorage.setItem("os_contacts", JSON.stringify(defaultContacts));
+          return defaultContacts;
+        }
+        return parsed;
+      }
+    } catch {}
+    return defaultContacts;
   });
 
-  const [selectedId, setSelectedId] = useState("graham");
+  const [selectedId, setSelectedId] = useState("sarah");
   const [searchQuery, setSearchQuery] = useState("");
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 

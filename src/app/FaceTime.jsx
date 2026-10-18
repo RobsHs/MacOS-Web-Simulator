@@ -122,65 +122,65 @@ export default function FaceTime({ windowId }) {
 
   const contacts = [
     {
-      id: "trev",
-      name: "Trev",
-      avatar: "/icons/PngItem_5031003.png",
-      sub: "Suggested",
-      type: "audio",
-      avatarBg: "#c7d5f5",
-      bgLight: "bg-slate-200/40 hover:bg-slate-200/60",
-      bgDark: "bg-slate-800/45 hover:bg-slate-800/65"
+      id: "alex",
+      name: "Alex Rivera",
+      avatar: "/icons/PngItem_6452863.png",
+      sub: "Video 10:14 AM",
+      type: "video",
+      avatarBg: "#f5e4c7",
+      bgLight: "bg-amber-200/35 hover:bg-amber-200/55",
+      bgDark: "bg-amber-900/15 hover:bg-amber-900/35"
     },
     {
-      id: "christian",
-      name: "Christian",
+      id: "sarah",
+      name: "Sarah Lin",
       avatar: "/icons/PngItem_4082636.png",
-      sub: "Video 9:39 AM",
+      sub: "Video 9:20 AM",
+      type: "video",
+      avatarBg: "#c7f5db",
+      bgLight: "bg-emerald-200/35 hover:bg-emerald-200/55",
+      bgDark: "bg-emerald-900/15 hover:bg-emerald-900/35"
+    },
+    {
+      id: "marcus",
+      name: "Marcus Vance",
+      avatar: "/icons/PngItem_4608119.png",
+      sub: "Audio Yesterday",
+      type: "audio",
+      avatarBg: "#c7e6f5",
+      bgLight: "bg-sky-200/40 hover:bg-sky-200/60",
+      bgDark: "bg-sky-900/20 hover:bg-sky-900/40"
+    },
+    {
+      id: "elena",
+      name: "Elena Rostova",
+      avatar: "/icons/PngItem_5031003.png",
+      sub: "Video Suggested",
       type: "video",
       avatarBg: "#f5c7c7",
       bgLight: "bg-rose-200/40 hover:bg-rose-200/60",
       bgDark: "bg-rose-900/20 hover:bg-rose-900/40"
     },
     {
-      id: "andre",
-      name: "Andre",
-      avatar: "/icons/PngItem_4608119.png",
-      sub: "Video 9:20 AM",
-      type: "video",
-      avatarBg: "#c7e6f5",
-      bgLight: "bg-sky-200/40 hover:bg-sky-200/60",
-      bgDark: "bg-sky-900/20 hover:bg-sky-900/40"
-    },
-    {
-      id: "brian",
-      name: "Brian",
+      id: "david",
+      name: "David Kim",
       avatar: "/icons/PngItem_4409921.png",
-      sub: "Audio Yesterday",
+      sub: "Audio Suggested",
       type: "audio",
-      avatarBg: "#c7f5db",
-      bgLight: "bg-emerald-200/35 hover:bg-emerald-200/55",
-      bgDark: "bg-emerald-900/15 hover:bg-emerald-900/35"
+      avatarBg: "#c7d5f5",
+      bgLight: "bg-slate-200/40 hover:bg-slate-200/60",
+      bgDark: "bg-slate-800/45 hover:bg-slate-800/65"
     },
     {
-      id: "will",
-      name: "Will",
-      avatar: "/icons/PngItem_6304991.png",
-      sub: "Suggested",
-      type: "audio",
-      avatarBg: "#d5c7f5",
-      bgLight: "bg-zinc-200/40 hover:bg-zinc-200/60",
-      bgDark: "bg-zinc-800/45 hover:bg-zinc-800/65"
-    },
-    {
-      id: "guillermo",
-      name: "Guillermo Castillo,...",
-      avatar: "/icons/PngItem_6452863.png",
-      sub: "Suggested",
+      id: "devteam",
+      name: "Core Dev Team",
+      avatar: "/icons/vscode.svg",
+      sub: "Group Suggested",
       type: "video",
       isGroup: true,
-      avatarBg: "#f5e4c7",
-      bgLight: "bg-amber-200/35 hover:bg-amber-200/55",
-      bgDark: "bg-amber-900/15 hover:bg-amber-900/35"
+      avatarBg: "#d5c7f5",
+      bgLight: "bg-indigo-200/35 hover:bg-indigo-200/55",
+      bgDark: "bg-indigo-900/20 hover:bg-indigo-900/40"
     }
   ];
 
