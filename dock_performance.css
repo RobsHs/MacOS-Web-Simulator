@@ -1,0 +1,15 @@
+/* Hardware Acceleration for macOS Dock Items */
+.dock-container {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.dock-item {
+    will-change: transform, width, height;
+    transition: transform 0.15s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.dock-item:hover {
+    transform: scale(1.35) translateY(-8px);
+}
