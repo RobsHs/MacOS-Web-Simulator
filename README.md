@@ -26,6 +26,16 @@
 
 Whether it is running real JavaScript code inside a full **Monaco-powered Visual Studio Code**, exploring the globe with live **GPS Geolocation on Maps**, playing curated video embeds on **Safari**, or experiencing real-time procedural sound synthesis, every interaction has been engineered for sub-frame responsiveness and tactile delight.
 
+## Star History
+
+<a href="https://www.star-history.com/?repos=robshs%2Fmacos-web-simulator&type=date&legend=top-left">
+ <picture>
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=robshs/macos-web-simulator&type=date&theme=dark&legend=top-left" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=robshs/macos-web-simulator&type=date&legend=top-left" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=robshs/macos-web-simulator&type=date&legend=top-left" />
+ </picture>
+</a>
+
 ---
 
 ## ✨ Key Features
